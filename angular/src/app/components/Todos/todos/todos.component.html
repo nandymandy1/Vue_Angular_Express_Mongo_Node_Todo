@@ -1,0 +1,18 @@
+<div
+  *ngIf="message"
+  [class]="success ? 'alert alert-success' : 'alert alert-danger'"
+>
+  {{ message }}
+</div>
+<app-add (addedTodo)="newTodoAdd($event)"></app-add>
+<ul class="list-group" *ngIf="todos.length">
+  <app-todo
+    *ngFor="let todo of todos"
+    [todo]="todo"
+    (todoDelete)="deleteTodo($event)"
+    (todoEdit)="initNotification($event)"
+  ></app-todo>
+</ul>
+<div class="mt-5 mb-5" *ngIf="!todos.length">
+  <p class="text-secondary text-center">No Todos...</p>
+</div>

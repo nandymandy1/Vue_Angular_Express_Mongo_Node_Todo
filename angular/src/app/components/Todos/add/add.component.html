@@ -1,0 +1,20 @@
+<div class="card mb-2">
+  <div class="card-header">
+    <h3>Add Todo</h3>
+  </div>
+  <div class="card-body">
+    <form (submit)="addTodo()">
+      <div class="form-group">
+        <label for="description">Todo Description</label>
+        <input
+          type="text"
+          name="description"
+          [(ngModel)]="newTodo"
+          placeholder="Todo Description"
+          class="form-control"
+        />
+      </div>
+      <input type="submit" class="btn btn-angular" value="Add Todo" />
+    </form>
+  </div>
+</div>

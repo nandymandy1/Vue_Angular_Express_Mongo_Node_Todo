@@ -1,0 +1,11 @@
+.list-group-item {
+  border-radius: 0;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.todo-text {
+  text-decoration: line-through;
+}
